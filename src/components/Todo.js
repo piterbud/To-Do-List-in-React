@@ -4,8 +4,7 @@ import TodoItem from './TodoItem';
 class Todo extends React.Component {
     state = {
         elements: [
-            { id: '3435345', isComplited: false, title: 'Zrobić zakupy' },
-            { id: '3432314', isComplited: false, title: 'Opłacić domenę' }
+            { id: '123456', isComplited: false, title: 'Zadanie dnia' },
         ],
         inputValue: ''
     }
@@ -19,14 +18,10 @@ class Todo extends React.Component {
     }
 
     // funkcje do dodawania elementów
-    // najpierw do stanu dodajemy nową wartość inputValue i dopisujemy ją do inputa
-    // do inputa dodajemy onChange, żeby wartość się aktualizowała jak tylko coś się zmieni
     inputHandler(event) {
         const newValue = event.target.value;
         this.setState({inputValue: newValue});
     }
-
-    // jak wartość zaktualizowana to muszę dodać nową wartość do mojej listy zadań
 
     addItem() {
         const item = {
@@ -55,5 +50,3 @@ class Todo extends React.Component {
 }
 
 export default Todo;
-
-// do stanu dodajemy elementy listy Todo (tablica obiektów)
